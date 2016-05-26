@@ -42,6 +42,7 @@ io.on('connection', function (socket){
 			if (clients[i].name === currentUser.name && clients[i].id === currentUser.id) {
 
 				console.log("User" + clients[i].name + "id :" + clients[i].id + "has disconnected");
+				clients.splice(i, 1);
 			};
 		};
 	});
